@@ -4,15 +4,12 @@
 namespace Kangdev\Sinanhui;
 
 
-use Hanson\Foundation\Foundation;
-
-class Server extends Foundation
+class Server
 {
     private $services;
 
     public function __construct($config)
     {
-        parent::__construct($config);
         $this->services = new Service($config['channel_no'], $config['url']);
     }
 

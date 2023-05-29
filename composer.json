@@ -1,8 +1,7 @@
 {
     "name": "kangdev/sinanhui",
     "description": "思南荟中台积分",
-    "type": "sdk",
-    "license": "Apache-2.0",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "Kangdev\\Sinanhui\\": "src/"
@@ -16,7 +15,8 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "hanson/foundation-sdk": "*"
+        "php": ">=7.0",
+        "guzzlehttp/guzzle": "~6.1"
     },
     "require-dev": {
         "phpunit/phpunit": "*"

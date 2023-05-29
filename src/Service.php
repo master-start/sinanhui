@@ -5,7 +5,7 @@ namespace Kangdev\Sinanhui;
 
 
 
-class Service extends Api
+class Service extends Curl
 {
     /**
      * 同步增加or减少积分接口
