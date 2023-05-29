@@ -3,6 +3,7 @@
 
 namespace Kangdev\Sinanhui;
 use GuzzleHttp\Client;
+use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Psr7\Request;
 
 class Curl
@@ -20,25 +21,24 @@ class Curl
         $this->url = $url;
     }
 
-    public function request(string $method, array $params,string $type = "post")
+    public function request(string $method, array $params,string $type = "POST")
     {
         if ($type == 'json'){
-            $type = "post";
+            $type = "POST";
         }
 
         $params = array_merge($params, [
             'channel_no' => $this->channel_no,
         ]);
 
-        $headers = [];
-        $body = $params;
-        $url = $this->url.$method;
-        $client = new Client();
-        $request = new Request(strtoupper($type), $url, $headers, $body);
-        return $client->sendAsync($request);
+        $client = new \GuzzleHttp\Client();
 
-
-        $request = new Request($type, $this->url.$method,[],$params);
-        return $request->getBody();
+        $res = $client->request(strtoupper($type), $this->url.$method, [
+            'json' => $params,
+            'headers' => [
+                'Content-Type' => 'application/json',
+            ]
+        ]);
+        return json_encode(json_decode($res->getBody()));
     }
 }

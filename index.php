@@ -1,15 +1,6 @@
-# 思南荟积分中台接口封装
-
-## Install
-
-```
-composer require kangdev/sinanhui -vvv
-```
-
-# Usage
-
-```php
 <?php
+require_once __DIR__ . '/vendor/autoload.php';
+
 $config = [
     'channel_no' => 'dc808c5e48ba28f24ff43b',
     'url' => 'https://luya.huidaojia.net',
@@ -26,10 +17,3 @@ $res = $server->action_integral([
 ]);
 
 echo $res;
-
-// 获取中台积分用户核销二维码
-$server->action_integral([
-    'phone' => '15538586868'
-]);
-
-```
