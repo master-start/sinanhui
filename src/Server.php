@@ -3,7 +3,14 @@
 
 namespace Kangdev\Sinanhui;
 
-
+/**
+ * @method array action_integral($params)
+ * @method array getIntegralUser($params)
+ * @method array getIntegralDetailed($params)
+ * @method array getIntegralCode($params)
+ * Class Server
+ * @package Kangdev\Sinanhui
+ */
 class Server
 {
     private $services;
