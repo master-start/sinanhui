@@ -1,0 +1,26 @@
+{
+    "name": "kangdev/sinanhui",
+    "description": "思南荟中台积分",
+    "type": "sdk",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Kangdev\\Sinanhui\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "master",
+            "email": "php-dev@qq.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=7.0",
+        "hanson/foundation-sdk": "^5.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.5"
+    },
+    "prefer-stable": true
+}
