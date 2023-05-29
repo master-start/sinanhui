@@ -2,7 +2,7 @@
     "name": "kangdev/sinanhui",
     "description": "思南荟中台积分",
     "type": "sdk",
-    "license": "MIT",
+    "license": "Apache-2.0",
     "autoload": {
         "psr-4": {
             "Kangdev\\Sinanhui\\": "src/"
