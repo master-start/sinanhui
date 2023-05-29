@@ -11,7 +11,7 @@ composer require kangdev/sinanhui -vvv
 ```php
 <?php
 $config = [
-    'channel_no' => 'dc808c5e48ba28f24ff43b',
+    'channel_no' => 'dc808c5e48454f43b',
     'url' => 'https://luya.huidaojia.net',
 ];
 
@@ -28,7 +28,7 @@ $res = $server->action_integral([
 echo $res;
 
 // 获取中台积分用户核销二维码
-$server->action_integral([
+$server->getIntegralCode([
     'phone' => '15538586868'
 ]);
 
