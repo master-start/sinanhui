@@ -46,4 +46,13 @@ class Service extends Curl
     {
         return $this->request('/open/api/getIntegralCode', $params,'json');
     }
+
+    /**
+     * 获取所有用户积分和明细列表
+     * @param array $params
+     * @return false|string
+     */
+    public function getIntegralList(array $params){
+        return $this->request('/open/api/getIntegralList', $params,'json');
+    }
 }
